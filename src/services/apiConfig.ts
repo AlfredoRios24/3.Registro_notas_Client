@@ -1,9 +1,8 @@
 
 // src/services/apiConfig.ts
-export const API_URL = 'http://localhost:8091/api';
+export const API_URL = 'https://three-registro-notas-server.onrender.com/api';
 
+export const API_URL_NOTES = 'https://three-registro-notas-server.onrender.com/api/notes';
 
-export const API_URL_NOTES = 'http://localhost:8092/api/notes';
-
-export const API_URL_SECTIONS = 'http://localhost:8092/api/sections';
+export const API_URL_SECTIONS = 'https://three-registro-notas-server.onrender.com/api/sections';
 
