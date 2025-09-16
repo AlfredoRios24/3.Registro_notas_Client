@@ -40,7 +40,7 @@ function App() {
         {/* Pie de página */}
         <footer>
           <p className='p-footer'>&copy; 2025 Mi Aplicación de Notas</p>
-          <a href="http://localhost:8091/swagger-ui/index.html" target='blank'>Swagger</a>
+          <a href="https://three-registro-notas-server.onrender.com/swagger-ui/index.html" target='blank'>Swagger</a>
         </footer>
       </div>
       </div>
