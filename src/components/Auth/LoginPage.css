@@ -1,0 +1,119 @@
+/* Fondo borroso que ocupa toda la pantalla */
+.login-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(8px); /* efecto borroso */
+  background-color: rgba(0, 0, 0, 0.3); /* semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Contenedor principal del login */
+.login-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  min-width: 320px;
+}
+
+/* Botón principal estilo app (Google) */
+.btn-primary {
+  background-color: #4285F4;
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary:hover {
+  background-color: #99b7e7;
+  transform: translateY(-2px);
+}
+
+.login-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+  filter: none;
+}
+
+/* ----------------------
+   LOGIN CON EMAIL
+----------------------- */
+.login-email-container {
+  margin-top: 2rem; /* separar del botón de Google */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-email-container h3 {
+  margin-bottom: 1rem;
+}
+
+.login-email-container form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 280px;
+}
+
+.login-email-container input {
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.login-email-container button {
+  background-color: #ff4081;
+  color: white;
+  font-weight: bold;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.login-email-container button:hover {
+  background-color: #eb8fae;
+  transform: translateY(-1px);
+}
+
+.login-email-container .toggle-btn {
+  margin-top: 0.75rem;
+  background: none;
+  border: none;
+  color: #ff4081;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.login-email-container .toggle-btn:hover {
+  text-decoration: underline;
+}
+
+.login-email-container .error {
+  color: red;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
