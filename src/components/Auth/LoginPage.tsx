@@ -2,6 +2,7 @@ import { signInWithPopup } from "firebase/auth";
 import { auth, provider } from "./firebaseConfig";
 import LoginEmail from "./LoginEmail";
 import "./LoginPage.css";
+import googlelogo from "../../assets/logoGoogle.png"
 
 interface LoginPageProps {
   onLogin: () => void;
@@ -29,7 +30,7 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
         <h2>Iniciar sesión</h2>
 
         <button className="btn-primary" onClick={handleGoogleLogin}>
-          <img src="/src/assets/logoGoogle.png" alt="Google Logo" className="login-icon"/>
+          <img src={googlelogo} alt="Google Logo" className="login-icon"/>
           Iniciar sesión con Google
         </button>
 
