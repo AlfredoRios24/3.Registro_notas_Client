@@ -59,8 +59,21 @@
     font-size: 24px;
     width: 100%;
     box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
   
+    .header-left {
+    margin: 5px;
+    margin-left: 38%;
+
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+  }
   
   /* =============================
       Navegación
@@ -198,3 +211,18 @@ form {
   margin: 0 auto;
   font-family: sans-serif;
 }
+
+.logout-btn {
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.logout-btn:hover {
+  background-color: #e91e63;
+}
+

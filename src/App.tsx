@@ -15,12 +15,22 @@ function App() {
     if (token) setUserLogged(true);
   }, []);
 
+  const handleLogout = () => {
+  localStorage.removeItem("token");
+  window.location.href = "/login"; // o usar navigate("/login");
+};
+
   return (
     <Router>
       <div className="app-container">
         <div className="main-content">
           <header>
-            <h1>Aplicación de Notas</h1>
+            <div className="header-left">
+              <h1>Aplicación de Notas</h1>
+            </div>
+              <div className="header-right">
+              <button onClick={handleLogout} className="logout-btn">Cerrar sesión</button>
+            </div>
           </header>
 
           {!userLogged ? (
@@ -33,6 +43,7 @@ function App() {
                 <ul>
                   <li><Link to="/">Lista de Notas</Link></li>
                   <li><Link to="/register">Registrar Nota</Link></li>
+                  
                 </ul>
               </nav>
 
@@ -48,6 +59,17 @@ function App() {
 
           <footer>
             <p className='p-footer'>&copy; 2025 Mi Aplicación de Notas</p>
+            <li>
+                <a
+                href="https://three-registro-notas-server.onrender.com/swagger-ui/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="swagger-link"
+              >
+                Swagger
+              </a>
+             
+            </li>
           </footer>
         </div>
       </div>

@@ -1,8 +1,8 @@
 import { signInWithPopup } from "firebase/auth";
+import googlelogo from "../../assets/logoGoogle.png";
 import { auth, provider } from "./firebaseConfig";
 import LoginEmail from "./LoginEmail";
 import "./LoginPage.css";
-import googlelogo from "../../assets/logoGoogle.png"
 
 interface LoginPageProps {
   onLogin: () => void;
