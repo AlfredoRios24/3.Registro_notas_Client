@@ -226,3 +226,18 @@ form {
   background-color: #e91e63;
 }
 
+.swagger-btn{
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.swagger-btn:hover {
+  background-color: #e91e63;
+}
+

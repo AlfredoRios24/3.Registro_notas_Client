@@ -29,7 +29,19 @@ function App() {
               <h1>Aplicación de Notas</h1>
             </div>
               <div className="header-right">
+                <button
+                className="swagger-btn"
+                onClick={() =>
+                window.open(
+                  "https://three-registro-notas-server.onrender.com/swagger-ui/index.html",
+                  "_blank"
+                  )
+                }
+              >
+                Swagger
+              </button>
               <button onClick={handleLogout} className="logout-btn">Cerrar sesión</button>
+
             </div>
           </header>
 
@@ -59,17 +71,6 @@ function App() {
 
           <footer>
             <p className='p-footer'>&copy; 2025 Mi Aplicación de Notas</p>
-            <li>
-                <a
-                href="https://three-registro-notas-server.onrender.com/swagger-ui/index.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="swagger-link"
-              >
-                Swagger
-              </a>
-             
-            </li>
           </footer>
         </div>
       </div>
