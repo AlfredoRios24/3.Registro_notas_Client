@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { signInWithPopup } from "firebase/auth";
 import googlelogo from "../../assets/logoGoogle.png";
 import { auth, provider } from "./firebaseConfig";
@@ -9,6 +10,8 @@ interface LoginPageProps {
 }
 
 export default function LoginPage({ onLogin }: LoginPageProps) {
+  const navigate = useNavigate();
+
   const handleGoogleLogin = async () => {
     try {
       const result = await signInWithPopup(auth, provider);
@@ -19,6 +22,7 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
       localStorage.setItem("user", JSON.stringify(user));
 
       onLogin();
+      navigate("/"); // redirige al NoteList
     } catch (error) {
       console.error("Error en login con Google:", error);
     }
@@ -36,8 +40,10 @@ export default function LoginPage({ onLogin }: LoginPageProps) {
 
         <hr />
 
-        {/* Login con Email */}
-        <LoginEmail onLogin={onLogin} />
+        <LoginEmail onLogin={() => {
+          onLogin();
+          navigate("/"); // mismo comportamiento para login con email
+        }} />
       </div>
     </div>
   );

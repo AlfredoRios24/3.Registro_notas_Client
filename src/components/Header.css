@@ -1,0 +1,56 @@
+ header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 24px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.header-left h1 {
+  font-size: 50px;
+  margin: 0;
+
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* separación entre botones */
+}
+
+/* Botón Swagger */
+.swagger-btn {
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.swagger-btn:hover {
+  background-color: #e91e63;
+}
+
+/* Botón Logout */
+.logout-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
